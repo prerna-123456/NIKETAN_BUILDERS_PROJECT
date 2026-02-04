@@ -1,0 +1,171 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 20%;
+
+    --primary: 30 10% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 35% 65%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 35 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 92%;
+    --input: 0 0% 95%;
+    --ring: 35 60% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 30 10% 20%;
+
+    --sidebar-primary: 30 10% 20%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 35 35% 65%;
+
+    --sidebar-accent-foreground: 30 10% 20%;
+
+    --sidebar-border: 0 0% 90%;
+
+    --sidebar-ring: 35 60% 55%;
+  }
+
+  .dark {
+    --background: 30 10% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 30 10% 22%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 30 10% 22%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 30 10% 20%;
+
+    --secondary: 35 35% 50%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 30 10% 30%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 35 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 25%;
+    --input: 30 10% 30%;
+    --ring: 35 60% 55%;
+    --sidebar-background: 30 10% 20%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 35 60% 55%;
+    --sidebar-primary-foreground: 30 10% 20%;
+    --sidebar-accent: 35 35% 50%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 30 10% 30%;
+    --sidebar-ring: 35 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+.hero-wrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 2.8s ease-in-out; /* <- video jaisa smooth */
+}
+
+.hero-image.active {
+  opacity: 1;
+}
+ 
+@keyframes ctaBackground {
+  0% {
+    background-image: url("/home1.jpg");
+  }
+  33% {
+    background-image: url("/home1.jpg");
+  }
+  66% {
+    background-image: url("/home2.jpg");
+  }
+  100% {
+    background-image: url("home3.jpg");
+  }
+}
+
+.cta-bg {
+  background-size: cover;
+  background-position: center;
+  animation: ctaBackground 15s ease-in-out infinite;
+}
+
+.scroll-up-soft {
+  transform: translateY(60px);
+  transition: transform 0.9s ease-out;
+}
+
+.scroll-up-soft-active {
+  transform: translateY(0);
+}
