@@ -147,7 +147,7 @@ export default function AboutUs() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="max-w-9xl mr-3 md:mr-20 ml-3 md:ml-20 mx-auto px-4 sm:px-10 lg:px-12 py-16 lg:py-36">
+      <section className="max-w-9xl mr-3 md:mr-20 ml-3 md:ml-16 mx-auto px-4 sm:px-10 lg:px-10 py-16 lg:py-36">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* IMAGE */}
@@ -157,7 +157,7 @@ export default function AboutUs() {
               alt="Niketan"
               className="rounded-[6px] shadow-lg
                 w-[350px] h-[290px]
-                md:w-[596px] md:h-[525px]"
+                md:w-[576px] md:h-[505px]"
             />
 
             {/* 35+ YEARS OF EXPERIENCE BADGE */}
@@ -197,7 +197,7 @@ export default function AboutUs() {
             <p className="
               tracking-widest text-[#CE9162] text-[18px] font-semibold font-montserrat
               mb-4 md:mb-10
-              ml-4 md:-ml-20
+              ml-4 md:-ml-6
               mr-4 md:-mr-0
             ">
               WHO WE ARE
@@ -208,7 +208,7 @@ export default function AboutUs() {
               text-3xl sm:text-[30px] lg:text-[50px]
               text-[#2B2B2B] font-playfair font-regular leading-tight
               mb-4 md:mb-10
-              ml-4 md:-ml-20
+              ml-4 md:-ml-6
               mr-4 md:-mr-0
             ">
               A Legacy of Trust Since 1989
@@ -216,7 +216,7 @@ export default function AboutUs() {
 
             {/* PARAGRAPHS */}
             <div className="space-y-4 md:space-y-6">
-              <p className="text-[#535353] text-[16px] font-montserrat font-medium leading-relaxed ml-4 md:-ml-20 mr-4 md:-mr-0">
+              <p className="text-[#535353] text-[16px] font-montserrat font-medium leading-relaxed ml-4 md:-ml-6 mr-4 md:-mr-0">
                 <span className="font-semibold text-black">
                   Niketan Builders Pvt. Ltd.
                 </span>{" "}
@@ -228,7 +228,7 @@ export default function AboutUs() {
                 functionality, modern design, and customer satisfaction.
               </p>
 
-              <p className="text-[#535353] font-medium font-montserrat text-[16px] leading-relaxed ml-4 md:-ml-20 mr-4 md:-mr-0">
+              <p className="text-[#535353] font-medium font-montserrat text-[16px] leading-relaxed ml-4 md:-ml-6 mr-4 md:-mr-0">
                 Founded with a vision to deliver reliable and value-driven
                 developments, Niketan Builders has consistently delivered projects
                 that blend architectural excellence with practical living. From land

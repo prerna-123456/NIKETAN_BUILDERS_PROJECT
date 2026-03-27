@@ -314,12 +314,12 @@ useEffect(() => {
         >
 
         {/* BIG IMAGE 1 */}
-        <div className="lg:col-span-2 lg:w-[725px] lg:h-[503px] rounded-2xl overflow-hidden bg-gray-300 ml-0 md:ml-20">
+        <div className="lg:col-span-2 lg:w-[635px] lg:h-[503px] rounded-2xl overflow-hidden bg-gray-300 ml-0 md:ml-20">
             <img src="/image1.jpg" className="w-full h-full object-cover" />
         </div>
 
         {/* BIG IMAGE 2 */}
-        <div className="lg:col-span-1 lg:w-[367px] lg:h-[503px] rounded-2xl -mt-3 md:mt-0 overflow-hidden bg-gray-300 ml-0 md:-ml-5">
+        <div className="lg:col-span-1 lg:w-[327px] lg:h-[503px] rounded-2xl -mt-3 md:mt-0 overflow-hidden bg-gray-300 ml-0 md:-ml-6">
             <img src="/image2.jpg" className="w-full h-full object-cover" />
         </div>
 
@@ -359,23 +359,23 @@ useEffect(() => {
             >
             <div className="max-w-8xl mx-auto mt-4 grid grid-cols-1 lg:grid-cols-4 gap-6 px-4 -ml-4 md:ml-16 -mr-4 md:mr-20">
                 {/* SECOND IMAGE → FIRST */}
-                <div className="lg:col-span-1 lg:w-[367px] lg:h-[503px] rounded-2xl overflow-hidden">
+                <div className="lg:col-span-1 lg:w-[327px] lg:h-[503px] rounded-2xl overflow-hidden">
                 <img src="/image2.jpg" className="w-full h-full object-cover" />
                 </div>
 
                 {/* SMALL IMAGES */}
                 <div className="lg:col-span-1 flex flex-col gap-6">
-                <div className="lg:w-[357px] lg:h-[247px] rounded-2xl -mt-3 md:mt-0 overflow-hidden md:ml-1">
+                <div className="lg:w-[317px] lg:h-[247px] rounded-2xl -mt-3 md:mt-0 overflow-hidden md:ml-1">
                     <img src="/image3.jpg" className="w-full h-full object-cover" />
                 </div>
 
-                <div className="lg:w-[357px] lg:h-[247px] rounded-2xl overflow-hidden -mt-3 md:-mt-4 md:ml-1">
+                <div className="lg:w-[317px] lg:h-[247px] rounded-2xl overflow-hidden -mt-3 md:-mt-4 md:ml-1">
                     <img src="/image4.jpg" className="w-full h-full object-cover" />
                 </div>
                 </div>
 
                 {/* FIRST IMAGE → LAST */}
-                <div className="lg:col-span-2 lg:w-[725px] lg:h-[503px] rounded-2xl -mt-3 md:mt-0 overflow-hidden">
+                <div className="lg:col-span-2 lg:w-[678px] lg:h-[503px] rounded-2xl -mt-3 md:mt-0 overflow-hidden">
                 <img src="/image1.jpg" className="w-full h-full object-cover" />
                 </div>
             </div>
