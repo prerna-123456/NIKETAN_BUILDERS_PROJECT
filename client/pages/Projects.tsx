@@ -352,12 +352,12 @@ export default function Projects() {
                             -mt-2 md:-mt-4
                           "
                         >
-                          <span className="bg-[#7D7D7D] text-white text-sm px-4 py-1.5 uppercase rounded-full font-montserrat font-medium">
+                          <span className="bg-[#7D7D7D] text-white text-[12px] md:text-sm px-4 py-1.5 uppercase rounded-full font-montserrat font-medium">
                             {project.status}
                           </span>
 
                           {project.rera && (
-                            <span className="bg-[#2B2B2B] text-white text-sm px-4 py-1.5 rounded-full font-montserrat font-medium">
+                            <span className="bg-[#2B2B2B] text-white text-[12px] md:text-sm px-4 py-1.5 rounded-full font-montserrat font-medium">
                               RERA REGISTERED
                             </span>
                           )}
