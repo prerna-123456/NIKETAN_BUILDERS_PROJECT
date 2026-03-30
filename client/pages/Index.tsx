@@ -682,7 +682,7 @@ export default function Index() {
                     </div>
 
                     {/* BUTTON */}
-                    <div className="flex justify-center font-montserrat font-medium">
+                    <div className="flex justify-center mb-6 md:mb-0 font-montserrat font-medium">
                       {project.status === "Coming Soon" ? (
                         <Link to="/coming-soon">
                           <button className="text-[#CE9162] text-[18px] md:text-[24px] font-medium tracking-wide mt-12 md:mt-20">
