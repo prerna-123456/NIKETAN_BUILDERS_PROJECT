@@ -211,7 +211,7 @@ export default function Index() {
               <img
                 src="/NiketanLogo.png"
                 alt="Niketan Logo"
-                className="h-[120px] w-auto ml-0 lg:ml-8 lg:w-[232px] sm:h-[160px] lg:h-[250px] mt-6 sm:mt-12 lg:mt-32 p-1 rounded"
+                className="h-[120px] w-auto ml-0 lg:ml-8 lg:w-[232px] sm:h-[160px] lg:h-[250px] mt-6 sm:mt-12 lg:mt-20 p-1 rounded"
               />
 
               {/* DESKTOP NAV (UNCHANGED) */}
@@ -653,7 +653,7 @@ export default function Index() {
                       )}
 
                       <div className="text-gray-600 text-sm md:text-[16px] font-montserrat font-regular leading-relaxed mb-6 md:mb-8 min-h-[48px]">
-                        {parts.length > 1 ? (
+                        {parts.length > 2 ? (
                           <>
                             <p>{parts[0].trim()} &</p>
                             <p>{parts[1]?.trim()}</p>
@@ -671,12 +671,12 @@ export default function Index() {
                             -mt-2 md:-mt-4
                           "
                         >
-                          <span className="bg-[#7D7D7D] text-white uppercase text-[12px] md:text-sm px-4 py-1.5 rounded-full font-montserrat font-medium">
+                          <span className="bg-[#7D7D7D] text-white uppercase text-[12px] md:text-[12px] px-4 py-1.5 rounded-full font-montserrat font-medium">
                             {project.status}
                           </span>
 
                           {project.rera && (
-                            <span className="bg-[#2B2B2B] text-white text-[12px] md:text-sm px-4 py-1.5 rounded-full font-montserrat font-medium">
+                            <span className="bg-[#2B2B2B] text-white text-[12px] md:text-[12px] px-4 py-1.5 rounded-full font-montserrat font-medium">
                               RERA REGISTERED
                             </span>
                           )}

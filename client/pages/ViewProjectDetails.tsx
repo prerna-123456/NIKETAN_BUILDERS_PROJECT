@@ -193,11 +193,11 @@ useEffect(() => {
             {/* LEFT */}
             <div>
                 <p className="tracking-widest text-[18px] -mt-4 font-montserrat font-semibold text-[#CE9162] uppercase ml-4 md:ml-20">
-                Raj Nagar, Hubballi
+                    Raj Nagar, Hubballi
                 </p>
 
-                <h2 className="font-playfair mt-4 text-[36px] md:text-[50px] text-[#2B2B2B] font-medium leading-tight ml-4 md:ml-20">
-                Niketan Luxuria
+                <h2 className="font-playfair mt-4 text-[36px] md:text-[50px] text-[#2B2B2B] font-medium leading-tight ml-4 md:ml-10 lg:ml-20">
+                    Niketan Luxuria
                 </h2>
             </div>
 
