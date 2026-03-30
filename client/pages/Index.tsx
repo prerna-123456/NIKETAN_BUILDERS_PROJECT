@@ -40,32 +40,31 @@ const item = {
   },
 }
 
-const ServiceCard = ({ service }) => 
-  { 
-    return ( 
-      <div className="flex flex-col items-center"> 
-      
-      {/* Image Wrapper */} 
-      <div className="relative group"> 
-        <img src={service.img} 
-        alt={service.title} 
-        className="w-30 h-30 mb-6 transition-transform duration-300 ease-out group-hover:scale-105" /> 
-        
-        {/* Soft Popup */} 
-        <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"> </div> 
-        </div> 
-        
-        {/* Title */} 
-        <h3 className="text-2xl font-semibold mb-4 text-[#2B2B2B]"> 
-          {service.title} 
-        </h3> 
-        
-        {/* Description */} 
-        <p className="text-base leading-7 text-[#6B6B6B] max-w-sm text-center"> 
-          {service.desc} 
-        </p> 
-      </div> 
-    ); 
+const ServiceCard = ({ service }) => {
+  return (
+    <div className="flex flex-col items-center">
+
+      {/* Image Wrapper */}
+      <div className="relative group">
+        <img src={service.img}
+          alt={service.title}
+          className="w-30 h-30 mb-6 transition-transform duration-300 ease-out group-hover:scale-105" />
+
+        {/* Soft Popup */}
+        <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"> </div>
+      </div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-semibold mb-4 text-[#2B2B2B]">
+        {service.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-base leading-7 text-[#6B6B6B] max-w-sm text-center">
+        {service.desc}
+      </p>
+    </div>
+  );
 };
 
 const testimonials = [
@@ -169,15 +168,15 @@ export default function Index() {
   ];
 
   useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentImageIndex(
-      (prev) => (prev + 1) % backgroundImages.length
-    );
-  }, 5000);
+    const interval = setInterval(() => {
+      setCurrentImageIndex(
+        (prev) => (prev + 1) % backgroundImages.length
+      );
+    }, 5000);
 
-  return () => clearInterval(interval);
-}, []);
-  
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white w-full overflow-x-hidden">
       {/* Hero Section */}
@@ -190,9 +189,8 @@ export default function Index() {
           {backgroundImages.map((img, index) => (
             <div
               key={index}
-              className={`hero-image ${
-                index === currentImageIndex ? "active" : ""
-              }`}
+              className={`hero-image ${index === currentImageIndex ? "active" : ""
+                }`}
               style={{ backgroundImage: `url(${img})` }}
             />
           ))}
@@ -235,17 +233,17 @@ export default function Index() {
                 </nav>
 
                 <a
-                href="tel:+919739856222"
-                className="relative overflow-hidden font-montserrat text-xl px-4 py-3 mt-12 text-white border border-[#CE9162] rounded-lg mr-12 inline-flex items-center gap-2 group"
-              >
-                <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CE9162] scale-0 group-hover:scale-[8] transition-transform duration-700"></span>
+                  href="tel:+919739856222"
+                  className="relative overflow-hidden font-montserrat text-xl px-4 py-3 mt-12 text-white border border-[#CE9162] rounded-lg mr-12 inline-flex items-center gap-2 group"
+                >
+                  <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CE9162] scale-0 group-hover:scale-[8] transition-transform duration-700"></span>
 
-                {/* TEXT MORE INWARD ON HOVER */}
-                <span className="relative z-10 inline-flex items-center gap-2 transition-transform duration-500 group-hover:scale-90">
-                  <img src="/call1.png" alt="Call Icon" className="w-5 h-5" />
-                  Call Now
-                </span>
-              </a>
+                  {/* TEXT MORE INWARD ON HOVER */}
+                  <span className="relative z-10 inline-flex items-center gap-2 transition-transform duration-500 group-hover:scale-90">
+                    <img src="/call1.png" alt="Call Icon" className="w-5 h-5" />
+                    Call Now
+                  </span>
+                </a>
               </div>
 
               {/* MOBILE MENU ICON */}
@@ -304,17 +302,17 @@ export default function Index() {
             {/* BUTTONS — ALWAYS SIDE BY SIDE */}
             <div className="flex flex-row gap-1 justify-center mt-6 sm:mt-8">
               <Link to="/projects">
-              <button className="
+                <button className="
                 px-5 py-2 text-[16px] font-montserrat
                 sm:px-4 sm:py-3 sm:text-[18px]
                 bg-[#CE9162] border border-[#CE9162] text-white
                 rounded-lg hover:bg-transparent hover:text-[#CE9162]
                 transition font-medium
               ">
-                Explore More
-              </button>
-            </Link>``
-              
+                  Explore More
+                </button>
+              </Link>``
+
               <Link to="/contact-us">
                 <button className="
                   relative overflow-hidden text-white font-montserrat
@@ -341,15 +339,15 @@ export default function Index() {
 
             {/* LEFT CONTENT */}
             <motion.div
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1.4,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                viewport={{ once: true }}
-                className="text-center md:text-left"
-              >
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              viewport={{ once: true }}
+              className="text-center md:text-left"
+            >
               <h1 className="text-xl md:ml-6 font-montserrat font-semibold mb-8 text-[#CE9162]">
                 ABOUT US
               </h1>
@@ -373,16 +371,16 @@ export default function Index() {
                 <span className="font-semibold text-black">
                   Niketan Builders Pvt Ltd
                 </span>{" "}
-                is a name that has been at the forefront of real estate since 1984. 
-                A trusted brand renowned for residential and office spaces, 
-                we deliver excellence in every project. 
-                Our expertise spans land development, residential apartments, 
+                is a name that has been at the forefront of real estate since 1984.
+                A trusted brand renowned for residential and office spaces,
+                we deliver excellence in every project.
+                Our expertise spans land development, residential apartments,
                 commercial spaces, multipurpose buildings, and more, across Hubli, Dharwad, and Bengaluru.
               </p>
 
               {/* BUTTON */}
               <Link to="/about-us">
-              <button className="
+                <button className="
                 relative overflow-hidden
                 md:ml-6
                 text-[#CE9162] text-[18px] font-medium font-montserrat
@@ -392,7 +390,7 @@ export default function Index() {
                 group transition
                 -mt-4 md:-mt-0
               ">
-                <span className="
+                  <span className="
                   absolute left-1/2 top-1/2
                   h-8 w-8
                   -translate-x-1/2 -translate-y-1/2
@@ -402,26 +400,26 @@ export default function Index() {
                   ease-[cubic-bezier(0.22,1,0.36,1)]
                 "></span>
 
-                <span className="relative z-10 flex items-center gap-1 group-hover:text-white transition">
-                  Read More
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-            </Link>
+                  <span className="relative z-10 flex items-center gap-1 group-hover:text-white transition">
+                    Read More
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
+              </Link>
             </motion.div>
 
             {/* RIGHT IMAGE */}
-              <motion.div
-                initial={{ opacity: 0, y: 90 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1.5,
-                  delay: 0.25,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                viewport={{ once: true }}
-                className="relative w-full md:ml-20 flex justify-center md:block"
-              >
+            <motion.div
+              initial={{ opacity: 0, y: 90 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.5,
+                delay: 0.25,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              viewport={{ once: true }}
+              className="relative w-full md:ml-20 flex justify-center md:block"
+            >
               <img
                 src="/NiketanBuilding1.png"
                 alt="Niketan Building"
@@ -438,24 +436,24 @@ export default function Index() {
               />
 
               {/* EXPERIENCE CARD */}
-                <motion.div
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{
-                    duration: 1.3,
-                    delay: 0.4,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  viewport={{ once: true }}
-                  className="
+              <motion.div
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 1.3,
+                  delay: 0.4,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                viewport={{ once: true }}
+                className="
                     absolute
                     bottom-4 left-1/2 -translate-x-1/2
                     md:bottom-10 md:-left-20 md:translate-x-0
                     bg-[#CE9162] rounded-[8px]
-                    px-6 py-3 md:px-7 md:py-6
-                    shadow-lg -ml-24
+                    px-6 py-3 md:px-7 md:py-5
+                    shadow-lg -ml-16 md:-ml-24
                   "
-                >
+              >
                 <div
                   className="
                     flex items-center gap-3 text-left 
@@ -467,18 +465,17 @@ export default function Index() {
                   <p
                     className="
                       text-white 
-                      text-[56px]
-                      leading-none
+                      text-[40px]
+                      leading-none mt-2
 
                       /* 💻 Desktop sizes – unchanged */
-                      sm:text-[48px] lg:text-[54px] font-playfair font-medium
+                      sm:text-[48px] lg:text-[54px] font-prata font-medium
                     "
                   >
-                    <img
-                      src="/year1.png"
-                      alt="year"
-                      className="h-[48px] sm:h-[48px] lg:h-[40px] w-auto"
-                    />
+                    35
+                    <span className="relative -top-3 md:-top-4 text-[40px] sm:text-[24px] lg:text-[54px]">
+                      +
+                    </span>
                   </p>
 
                   <div className="leading-tight font-montserrat font-regular">
@@ -538,8 +535,8 @@ export default function Index() {
 
               {/* VIEW ALL BUTTON */}
               <Link to="/projects">
-              <button
-                className="
+                <button
+                  className="
                   relative overflow-hidden border border-[#CE9162]
                   text-[16px] md:text-[18px]
                   text-[#CE9162]
@@ -547,15 +544,15 @@ export default function Index() {
                   mt-4 md:-mt-36
                   self-center md:self-auto
                 "
-              >
-                <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CE9162] scale-0 group-hover:scale-[8] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"></span>
+                >
+                  <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#CE9162] scale-0 group-hover:scale-[8] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"></span>
 
-                <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition">
-                  View All
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button>
-            </Link>
+                  <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition">
+                    View All
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </motion.div>
 
@@ -688,9 +685,9 @@ export default function Index() {
                     <div className="flex justify-center font-montserrat font-medium">
                       {project.status === "Coming Soon" ? (
                         <Link to="/coming-soon">
-                        <button className="text-[#CE9162] text-[18px] md:text-[24px] font-medium tracking-wide mt-12 md:mt-20">
-                          COMING SOON
-                        </button>
+                          <button className="text-[#CE9162] text-[18px] md:text-[24px] font-medium tracking-wide mt-12 md:mt-20">
+                            COMING SOON
+                          </button>
                         </Link>
                       ) : (
                         <>
@@ -731,7 +728,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      
+
       {/*Video*/}
       <motion.section
         className="
@@ -760,6 +757,7 @@ export default function Index() {
           muted
           loop
           playsInline
+          controls
         />
       </motion.section>
 
@@ -950,7 +948,7 @@ export default function Index() {
 
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-20">
-            <p className="uppercase tracking-widest font-montserrat font-semibold text-[14px] sm:text-[18px] text-[#CE9162] mb-4 sm:mb-6">
+            <p className="uppercase tracking-widest font-montserrat font-semibold text-[14px] sm:text-[18px] text-[#CE9162] mb-6 sm:mb-6">
               Our Services
             </p>
 
@@ -961,7 +959,7 @@ export default function Index() {
                 font-playfair font-regular text-[#2B2B2B]
                 leading-tight
                 max-w-[320px] mx-auto
-                sm:max-w-none
+                sm:max-w-none 
               "
             >
               Expertly crafted services that <br className="hidden sm:block" />
@@ -970,7 +968,7 @@ export default function Index() {
           </div>
 
           {/* Top Row – 3 Services (UNCHANGED DESKTOP) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 font-montserrat font-regular text-center mb-14 sm:mb-20 -mt-4 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-16 font-montserrat font-regular text-center mb-14 sm:mb-20 mt-10 md:mt-0">
             {[
               {
                 title: "Residential Apartments",
@@ -1026,7 +1024,7 @@ export default function Index() {
         <div className="max-w-11xl mx-auto px-4 sm:px-6 md:ml-12 md:mr-12">
 
           {/* Heading */}
-          <p className="text-center tracking-widest text-[14px] sm:text-[18px] text-[#CE9162] font-montserrat font-semibold mb-3 sm:mb-4">
+          <p className="text-center tracking-widest text-[14px] sm:text-[18px] text-[#CE9162] font-montserrat font-semibold mb-6 sm:mb-4">
             TESTIMONIALS
           </p>
 
@@ -1047,74 +1045,74 @@ export default function Index() {
 
           {/* Slider */}
           <div className="mt-4 sm:mt-0">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={24}
-            loop={true}
-            className="!overflow-visible"
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            speed={800}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {testimonials.map((t, i) => (
-              <SwiperSlide key={i}>
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={24}
+              loop={true}
+              className="!overflow-visible"
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              speed={800}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+            >
+              {testimonials.map((t, i) => (
+                <SwiperSlide key={i}>
 
-                {/* CARD */}
-                <motion.div
-                  whileHover={{ y: -14, scale: 1.03 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 min-h-[320px] sm:min-h-[360px] flex flex-col mt-2 sm:mt-10"
-                >
+                  {/* CARD */}
+                  <motion.div
+                    whileHover={{ y: -14, scale: 1.03 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 min-h-[320px] sm:min-h-[360px] flex flex-col mt-2 sm:mt-10"
+                  >
 
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, j) => (
-                      <span
-                        key={j}
-                        className="text-yellow-400 text-[22px] sm:text-3xl"
-                      >
-                        ★
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Message */}
-                  <p className="text-gray-600 text-[15px] sm:text-[16px] font-montserrat font-regular leading-relaxed mb-6 sm:mb-8 flex-grow">
-                    “{t.message}”
-                  </p>
-
-                  <hr className="mb-5 sm:mb-6" />
-
-                  {/* User */}
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                    />
-
-                    <div>
-                      <p className="font-regular font-playfair text-[16px] sm:text-[18px] text-[#2B2B2B]">
-                        {t.name}
-                      </p>
-                      <p className="text-[11px] font-montserrat font-regular sm:text-[12px] text-gray-500">
-                        {t.role}
-                      </p>
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, j) => (
+                        <span
+                          key={j}
+                          className="text-yellow-400 text-[22px] sm:text-3xl"
+                        >
+                          ★
+                        </span>
+                      ))}
                     </div>
-                  </div>
 
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+                    {/* Message */}
+                    <p className="text-gray-600 text-[15px] sm:text-[16px] font-montserrat font-regular leading-relaxed mb-6 sm:mb-8 flex-grow">
+                      “{t.message}”
+                    </p>
+
+                    <hr className="mb-5 sm:mb-6" />
+
+                    {/* User */}
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                      />
+
+                      <div>
+                        <p className="font-regular font-playfair text-[16px] sm:text-[18px] text-[#2B2B2B]">
+                          {t.name}
+                        </p>
+                        <p className="text-[11px] font-montserrat font-regular sm:text-[12px] text-gray-500">
+                          {t.role}
+                        </p>
+                      </div>
+                    </div>
+
+                  </motion.div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
 
@@ -1123,7 +1121,7 @@ export default function Index() {
         <div className="max-w-8xl mx-auto px-4 sm:px-6">
 
           {/* Heading */}
-          <h2 className="text-[30px] sm:text-[50px] text-center font-playfair font-regular text-[#2B2B2B] leading-tight mb-12 sm:mb-24">
+          <h2 className="text-[30px] sm:text-[50px] text-center font-playfair font-regular text-[#2B2B2B] leading-tight mb-16 sm:mb-24">
             Built With Trusted Brands
           </h2>
 
@@ -1196,7 +1194,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 sm:py-40 px-4 sm:px-6 lg:px-8 overflow-hidden cta-bg">
+      <section className="relative py-20 sm:py-40 px-4 sm:px-6 lg:px-8 overflow-hidden cta-bg -mt-8">
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
@@ -1216,11 +1214,11 @@ export default function Index() {
           </p>
 
           <Link to="/contact-us">
-          <button className="inline-flex items-center gap-2 px-6 sm:px-3 py-3 sm:py-4 bg-[#CE9162] border border-[#CE9162] text-[16px] sm:text-[18px] text-white font-montserrat font-medium rounded-lg hover:bg-transparent hover:text-[#CE9162] transition">
-            Book a Site Visit
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </button>
-        </Link>
+            <button className="inline-flex items-center gap-2 px-6 sm:px-3 py-3 sm:py-4 bg-[#CE9162] border border-[#CE9162] text-[16px] sm:text-[18px] text-white font-montserrat font-medium rounded-lg hover:bg-transparent hover:text-[#CE9162] transition">
+              Book a Site Visit
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -1279,30 +1277,30 @@ export default function Index() {
             <div className="mt-4 md:mt-20 ml-0 md:ml-10 text-center md:text-left">
               <h4 className="font-medium font-montserrat text-[18px] mb-4">Quick Links</h4>
               <ul className="space-y-3 font-montserrat font-regular text-[16px] text-[#DADADA]">
-              <li>
-                <a href="/about-us" className="hover:text-white hover:underline transition">
-                  About Us
-                </a>
-              </li>
+                <li>
+                  <a href="/about-us" className="hover:text-white hover:underline transition">
+                    About Us
+                  </a>
+                </li>
 
-              <li>
-                <a href="/projects" className="hover:text-white hover:underline transition">
-                  Projects
-                </a>
-              </li>
+                <li>
+                  <a href="/projects" className="hover:text-white hover:underline transition">
+                    Projects
+                  </a>
+                </li>
 
-              <li>
-                <a href="/blog" className="hover:text-white hover:underline transition">
-                  Blog
-                </a>
-              </li>
+                <li>
+                  <a href="/blog" className="hover:text-white hover:underline transition">
+                    Blog
+                  </a>
+                </li>
 
-              <li>
-                <a href="/contact-us" className="hover:text-white hover:underline transition">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a href="/contact-us" className="hover:text-white hover:underline transition">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
             </div>
 
             {/* Address */}
@@ -1354,7 +1352,7 @@ export default function Index() {
                 <h4 className="font-medium font-montserrat text-[18px] mt-8 -mb-6">
                   Email
                 </h4>
-              </div> 
+              </div>
 
               <div className="flex justify-center md:justify-start items-start font-montserrat font-medium gap-3 mt-10">
                 <a

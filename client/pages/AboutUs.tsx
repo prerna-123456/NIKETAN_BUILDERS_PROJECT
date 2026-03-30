@@ -164,24 +164,23 @@ export default function AboutUs() {
             <div
               className="
                 absolute
-                bottom-4 right-4
-                md:bottom-4 md:right-28
+                bottom-4 right-6
+                md:bottom-4 md:right-16
 
                 bg-[#CE9162]
                 rounded-[8px]
-                px-3 py-3
-                md:px-5 md:py-6
+                px-3 py-0
+                md:px-5 md:py-2
 
                 flex items-center gap-3 md:gap-4
                 shadow-lg
               "
             >
-              <span className="text-white text-[36px] md:text-[56px] font-playfair font-medium">
-                <img
-                      src="/year1.png"
-                      alt="year"
-                      className="h-[45px] sm:h-[48px] lg:h-[40px] w-auto"
-                    />
+              <span className="text-white text-[36px] md:text-[54px] font-prata font-medium mt-2 md:mt-2">
+                35
+                <span className="relative -top-3 md:-top-4 text-[40px] sm:text-[24px] lg:text-[54px]">
+                      +
+                    </span>
               </span>
 
               <span className="text-white text-[13px] md:text-[16px] font-montserrat font-regular leading-tight">
