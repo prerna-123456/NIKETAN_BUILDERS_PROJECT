@@ -560,7 +560,7 @@ export default function Index() {
           </motion.div>
 
           {/* CARDS */}
-          <div className="grid md:grid-cols-3 gap-8 sm:gap-10 mb-16 mt-24">
+          <div className="grid md:grid-cols-3 gap-8 sm:gap-10 mb-16 mt-10 md:mt-24">
             {[
               {
                 title: "Niketan Luxuria",
