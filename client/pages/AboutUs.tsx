@@ -169,7 +169,7 @@ export default function AboutUs() {
 
                 bg-[#CE9162]
                 rounded-[8px]
-                px-4 py-2
+                px-3 py-3
                 md:px-5 md:py-6
 
                 flex items-center gap-3 md:gap-4
@@ -180,7 +180,7 @@ export default function AboutUs() {
                 <img
                       src="/year1.png"
                       alt="year"
-                      className="h-[56px] sm:h-[48px] lg:h-[40px] w-auto"
+                      className="h-[45px] sm:h-[48px] lg:h-[40px] w-auto"
                     />
               </span>
 

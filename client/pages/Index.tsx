@@ -452,7 +452,7 @@ export default function Index() {
                     bottom-4 left-1/2 -translate-x-1/2
                     md:bottom-10 md:-left-20 md:translate-x-0
                     bg-[#CE9162] rounded-[8px]
-                    px-6 py-4 md:px-7 md:py-6
+                    px-6 py-3 md:px-7 md:py-6
                     shadow-lg -ml-24
                   "
                 >
@@ -477,7 +477,7 @@ export default function Index() {
                     <img
                       src="/year1.png"
                       alt="year"
-                      className="h-[56px] sm:h-[48px] lg:h-[40px] w-auto"
+                      className="h-[48px] sm:h-[48px] lg:h-[40px] w-auto"
                     />
                   </p>
 
